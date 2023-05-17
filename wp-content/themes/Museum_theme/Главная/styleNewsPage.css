@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Hubballi', sans-serif;
+    box-sizing: border-box;
+}
+
+.banner {
+    height: 455px;
+    background-color: #e25d5e;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+.banner-left {
+    background: url("image/banner-img1.png") no-repeat;
+    height: 495px;
+    width: 743px;
+}
+
+.banner-right {
+    background: url("image/banner-img1.png") no-repeat;
+    transform: scale(-1, 1);
+    height: 495px;
+    width: 743px;
+}
+.banner-logo{
+    background: url("image/logotip-02-02.png") no-repeat;
+    background-position: 50% 20% ;
+    height: 495px;
+    width: 100%;;
+}
+
+.banner p {
+    font-size: 98px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    text-shadow: #000 1px 0 5px;
+    ;
+}
+
+.main-menu {
+    height: 40px;
+    font-size: 18px;
+    padding-top: 20px;
+    background: #e25d5e;
+}
+
+.main-menu ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1592px;
+    margin: 0px auto;
+}
+
+.menu-wrapper p {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+
+.backarrow {
+    height: 50px;
+    margin: 30px 20px 10px;
+    font-size: 16pt;
+}
+.backarrow a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*Wrapper*/
+.wrapper {
+    max-width: 1400px;
+    margin: 5px auto 50px auto;
+    /* border: #e25d5e 1px solid; */
+}
+
+/* грид постов*/
+.card {
+    /* border: #5557d6 1px solid; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 600px auto;
+    gap: 14px 2px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Title Title Date"
+        "Photo Photo Photo"
+        "Text Text Text";
+}
+
+.Title {
+    justify-self: start;
+    grid-area: Title;
+    font-size: 16pt;
+    align-self: end;
+}
+.Title a {
+    text-decoration: none;
+    color: #000;
+}
+
+.Date {
+    justify-self: end;
+    grid-area: Date;
+    align-self: end;
+    font-size: 16pt;
+}
+
+.Photo {
+    grid-area: Photo;
+    overflow: hidden;
+    justify-self: center;
+}
+
+
+.Text {
+    grid-area: Text;
+    font-size: 14pt;
+
+}
+.Text a {
+    text-decoration: none;
+    color: #000;
+}
+.Text p{
+    text-indent:20px
+  }
+
+.card .Photo img {
+    object-fit: cover;
+    max-height: 100%;
+}
+
+/* FOOTER */
+footer {
+    background-color: #c2c2c2;
+    height: 180px;
+    text-align: center;
+    color: #000000;
+    font-size: 22px;
+    margin: 20px auto;
+    margin-bottom: 0px;
+    padding-top: 40px;
+
+}
+
+footer p {
+    padding-top: 28px;
+    font-size: 18px;
+}
+
+footer p:nth-child(1) {
+    float: left;
+    margin-left: 200px;
+}
+
+footer p:nth-child(2) {
+    float: right;
+    margin-right: 200px;
+}
+
+/* сетка подвала */
+[class^="box-"] {
+    /* border: 1px solid black; */
+    display: grid;
+    place-items: end;
+}
+
+.container {
+    /* margin-top: 20px; */
+    display: grid;
+    gap: 10px;
+    height: 100px;
+    /* justify-items:end; */
+    grid-template-columns: auto 400px 400px;
+    grid-template-areas:
+        "void o-projecte we-socials"
+        "copyright writeus socialicons";
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.box-1 {
+    grid-area: copyright;
+    justify-self: start;
+    font-size: 26px;
+}
+
+.box-2 {
+    grid-area: o-projecte;
+}
+
+.box-3 {
+    grid-area: we-socials;
+}
+
+.box-4 {
+    grid-area: writeus;
+}
+
+.box-5 {
+    grid-area: socialicons;
+    display: inline;
+    text-align: right;
+
+}
+
+.box-5 img {
+    width: 40px;
+    margin: 5px;
+
+}
+
+.box-void {
+    grid-area: void;
+}

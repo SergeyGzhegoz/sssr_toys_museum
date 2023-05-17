@@ -1,0 +1,39 @@
+<?php get_header(); ?>
+    <div class="wrapper">
+        <section class="knopa">
+            <a href="Toys.html"><img src="image/arrow.png" alt="Назад"></a>
+        </section>
+        
+        <?php
+            $loop = CFS()->get('toy');
+            foreach($loop as $row)
+            { ?>
+            <section class="product">
+                <div class="product-img">
+                    <img src="<?= $row['general_photo']?>" alt="">
+                </div>
+                <div class="prod-left">
+                    <p><?= $row['toy_name']?></p>
+                    <p>Производство:</p>
+                    <p><?= $row['proizodstvo']?></p>
+                    <div class="grid-mini-foto">
+                        <img src="<?= $row['photo1']?>" alt="img1">
+                        <img src="<?= $row['photo2']?>" alt="img2">
+                        <img src="<?= $row['photo3']?>" alt="img3">
+                        <img src="<?= $row['photo4']?>" alt="img4">
+                    </div>
+                </div>                            
+            </section>
+            
+            <section class="inf">
+                <div>
+                    <h1>Информация об игрушке</h1>
+                    <p><?= $row['opisanie']?></p>
+                </div>
+            </section>
+            <?php
+            }
+            ?>
+    </div>
+<?php get_footer(); ?>
+            
